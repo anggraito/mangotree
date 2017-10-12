@@ -29,7 +29,7 @@ app.get('/live', (req, res) => {
               Have much fruits ${tree.fruits} harvested with specify : 
               (${tree.good} good, ${tree.bad} bad)`
     })
-    console.log(`[REport: Year ${tree.age} Report] I have Height = ${tree.height} meters | 
+    console.log(`[Report: Year ${tree.age} Report] I have Height = ${tree.height} meters | 
                 Have much fruits ${tree.fruits} harvested with specify : 
                 (${tree.good} good, ${tree.bad} bad)`)
     if (tree.healthy == false) {
