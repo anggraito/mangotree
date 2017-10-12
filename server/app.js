@@ -24,7 +24,7 @@ app.get('/live', (req, res) => {
     tree.harvest();
     tree.produceMangoes();
     db.ref('mango').set({
-      deadMessage: '',
+      stopMessage: '',
       status: `[Report: Year ${tree.age}] I have Height : ${tree.height} meters | 
               Have much fruits ${tree.fruits} harvested with specify : 
               (${tree.good} good, ${tree.bad} bad)`
@@ -35,7 +35,7 @@ app.get('/live', (req, res) => {
     if (tree.healthy == false) {
       console.log(`Enaugh to growth, don't let me fell`)
       db.ref('mango').set({
-        deadMessage: 'FIN, and goodbye'
+        stopMessage: 'FIN, and goodbye'
       })
       cronJob.stop()
     }
